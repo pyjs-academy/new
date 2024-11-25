@@ -1,0 +1,111 @@
+/* Стиль для body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Устанавливаем высоту на весь экран */
+    /* background: linear-gradient(45deg, #ff6b6b, #f1c40f, #2ecc71, #3498db); */
+    /* background-size: 400% 400%; */
+    /* animation: gradient 15s ease infinite; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* Плавная анимация фона
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+} */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#bg-video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8; /* Можно изменить прозрачность видео, если нужно */
+}
+
+/* Стиль контейнера */
+.container {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Это заставит элементы внутри контейнера располагаться по вертикали */
+    align-items: center; /* Центрируем все элементы по горизонтали */
+}
+
+/* Заголовок */
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Стили для формы */
+form {
+    display: flex;
+    flex-direction: column; /* Размещение элементов формы по вертикали */
+    width: 100%; /* Убедимся, что форма не выходит за пределы контейнера */
+    gap: 15px; /* Отступ между элементами формы */
+}
+
+/* Стили для input и button */
+input, button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+input {
+    width: 100%; /* Полная ширина */
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Ссылки */
+a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+a:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    text-decoration: underline;
+}

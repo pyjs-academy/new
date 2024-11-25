@@ -1,0 +1,160 @@
+/* Стиль для body */
+body {
+    /* background-image: url("/static/bgg.jpg"); */
+    /* background-image: url("{{ url_for('static', filename='bg.jpg') }}"); */
+    font-family: 'Arial', sans-serif;
+    /* background-size: cover; Чтобы изображение заполнило весь экран */
+    /* background-position: center center; Центрируем изображение */
+    /* background-attachment: fixed; Фон будет фиксированным при прокрутке */
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    min-height: 100vh; /* Убедимся, что фон занимает весь экран */
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#bg-video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8; /* Можно изменить прозрачность видео, если нужно */
+}
+
+
+/* Контейнер для дашборда */
+.container {
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    background-color: rgba(255, 255, 255, 0.1); /* Прозрачный фон для контента */
+}
+
+/* Заголовок */
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Стиль для статьи */
+.article {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Белый полупрозрачный фон */
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    max-width: 750px;
+    width: 100%;
+    text-align: center;
+}
+
+.article h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+.article p {
+    font-size: 16px;
+    color: #555;
+}
+
+.article-image {
+    width: 100%;
+    max-width: 600px;
+    margin: 15px 0;
+    border-radius: 8px;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header .header-right {
+    display: flex;
+    align-items: center;
+}
+
+header .search-bar {
+    padding: 8px;
+    margin-right: 20px;
+    border-radius: 5px;
+    border: none;
+    max-width: 200px;
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: background-color 0.3s ease;
+}
+
+header .search-bar:focus {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* Logout Link */
+.logout {
+    display: inline-block;
+    background-color: #f44336;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.logout:hover {
+    background-color: #d32f2f;
+}
+
+/* Улучшение для мобильных устройств */
+@media (max-width: 768px) {
+    header .logo img {
+        height: 40px;
+    }
+
+    header .search-bar {
+        max-width: 150px;
+    }
+
+    .article {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .article-image {
+        max-width: 100%;
+    }
+}

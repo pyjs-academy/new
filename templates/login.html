@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <source src="{{ url_for('static', filename='hellown.mp4') }}" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+    </div>
+    <div class="container">
+        <h1>Login</h1>
+
+        <!-- Вывод ошибки, если она есть -->
+        {% if error_message %}
+            <p style="color: red;">{{ error_message }}</p>
+        {% endif %}
+        
+        <!-- Форма логина -->
+        <form action="/login" method="POST" autocomplete="off">
+            <input type="text" name="username" placeholder="Username" autocomplete="off" required>
+            <input type="password" name="password" placeholder="Password" autocomplete="new-password" required>
+            <button type="submit">Login</button>
+        </form>
+        
+        <a href="/register">Don't have an account? Register here</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <source src="{{ url_for('static', filename='hellown.mp4') }}" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+    </div>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+        </div>
+        <div class="header-right">
+            <input type="text" placeholder="Search..." class="search-bar">
+            <a href="{{ url_for('logout') }}" class="logout">Logout</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Welcome to Your Dashboard!</h1>
+        <p>Your projects and portfolio will be shown here soon.</p>
+
+        <section class="article">
+            <h2>Random Article</h2>
+            <p>This is a sample article with random text and images to show how content can be structured in your dashboard.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet felis a augue pretium pharetra.</p>
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Random Image" class="article-image">
+            <p>Curabitur faucibus augue sit amet urna suscipit, vitae consectetur felis viverra.</p>
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Random Image" class="article-image">
+        </section>
+    </main>
+</body>
+</html>
