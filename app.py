@@ -5,6 +5,9 @@ import database
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # Используй более безопасный ключ в реальных приложениях
 
+# Создание базы данных при старте приложения
+database.create_db()
+
 @app.route("/")
 def home():
     return redirect(url_for("login"))
@@ -23,7 +26,6 @@ def register():
             return redirect(url_for("login"))
     return render_template("register.html", error_message=error_message)
 
-
 @app.route("/login", methods=["GET", "POST"])
 def login():
     error_message = None
@@ -36,7 +38,6 @@ def login():
             return redirect(url_for("dashboard"))
         error_message = "Invalid username or password"
     return render_template("login.html", error_message=error_message)
-
 
 @app.route("/dashboard")
 def dashboard():
